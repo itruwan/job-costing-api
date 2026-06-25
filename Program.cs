@@ -12,7 +12,8 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                "http://localhost:5173"
+                "http://localhost:5173",
+                "https://black-tree-0958b2810.7.azurestaticapps.net"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
