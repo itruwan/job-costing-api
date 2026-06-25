@@ -1,6 +1,18 @@
-@JobCostingAPI_HostAddress = http://localhost:5062
+@JobCostingAPI_HostAddress = http://localhost:5000
 
-GET {{JobCostingAPI_HostAddress}}/weatherforecast/
+GET {{JobCostingAPI_HostAddress}}/
 Accept: application/json
 
 ###
+
+POST {{JobCostingAPI_HostAddress}}/api/job-costing/calculate
+Content-Type: application/json
+
+{
+  "labourHours": 12,
+  "hourlyRate": 85,
+  "materialsCost": 450,
+  "travelCost": 60,
+  "markupPercentage": 25,
+  "includeGst": true
+}
